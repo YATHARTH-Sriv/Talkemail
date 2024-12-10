@@ -41,6 +41,7 @@ function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newEmail, setNewEmail] = useState('');
   const [isCollapsed, setIsCollapsed] = useState(false);
+  // console.log("access token",session?.accessToken)
 
   const userEmail = session?.user.email;
 
@@ -101,12 +102,6 @@ function Page() {
               <h2 className="text-lg font-semibold text-gray-800">TalkEmail</h2>
             </div>
           )}
-          <button
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="bg-gray-100 text-gray-600 p-1.5 rounded-full hover:bg-gray-200 transition-colors"
-          >
-            {isCollapsed ? '>' : '<'}
-          </button>
         </div>
 
         {/* Email Account Selector */}

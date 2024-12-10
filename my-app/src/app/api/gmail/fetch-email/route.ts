@@ -1,12 +1,12 @@
-import dbConnect from "@/lib/db/connect";
 import { NextRequest, NextResponse } from "next/server";
 import { google } from "googleapis";
 import EmailModel from "@/lib/db/model/save.email.model";
+import dbconnect from "@/lib/db/connect";
 
 export async function POST(req: NextRequest) {
   try {
     // Connect to database
-    await dbConnect();
+    await dbconnect();
 
     // Parse the request body
     const body = await req.json();
@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     // Fetch messages
     const response = await gmail.users.messages.list({
       userId: 'me',
-      maxResults: 3,
+      maxResults: 1,
       q: `from:${emailtobemonitored} `
     });
     console.log(response.data.messages);
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
         const fromHeader = headers.find(h => h.name === 'From');
         return {
           id: msg.data.id,
-          snippet: msg.data.snippet,
+          snippet: msg.data?.snippet,
           subject: subjectHeader?.value,
           from: fromHeader?.value,
           when: timeheader?.value
