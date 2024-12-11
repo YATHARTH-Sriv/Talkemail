@@ -39,16 +39,16 @@ export default function LandingPage() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-4">
                 <div className="bg-white bg-opacity-10 px-6 py-2 rounded-full">
-                  <Link href="/docs" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Docs
                   </Link>
-                  <Link href="/pricing" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Pricing
                   </Link>
-                  <Link href="/blog" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <Link href="https://yatharthportfolio.vercel.app/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     About Me
                   </Link>
-                  <Link href="/company" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                  <Link href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                     Company
                   </Link>
                 </div>
